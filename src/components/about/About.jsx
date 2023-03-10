@@ -3,10 +3,6 @@ import logo from "../../assets/logo.png";
 import "./about.scss";
 
 const About = () => {
-    const visitInstagram = () => {
-        window.location = "https://www.instagram.com/gabrielnahuel_/";
-      };
-
 
   return (
     <div className="aboutSection">
@@ -23,9 +19,10 @@ const About = () => {
               alt="Creador"
             />
             <h3>A•O•E Tienda de indumentaria</h3>
-            <button className="button" onClick={visitInstagram} color="primary">
+
+            <a className="button" target="_blank" rel="noreferrer" href="https://www.instagram.com/aoe_indumentaria">
               Visita nuestro Instagram
-            </button>
+            </a>
           </div>
           <div className="aboutSectionContainer2">
             <h2 component="h2">Somos un emprendimiento</h2>
