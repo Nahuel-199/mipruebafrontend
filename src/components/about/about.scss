@@ -1,0 +1,149 @@
+@import "../../css-config/mixins.scss";
+.aboutSection {
+    height: 100vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  @include md {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+  
+  .aboutSectionGradient {
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(78, 81, 255),
+      rgb(74, 137, 189)
+    );
+  }
+  .aboutSectionContainer {
+    position: absolute;
+    left: 50%;
+   
+    background-color: rgb(255, 255, 255);
+    width: 80vw;
+    height: 100vh;
+    margin-top: 95%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+        height: 65vh;
+        margin-top: 20%;
+      }
+  }
+
+  .img-about{
+    width: 15vmax;
+    height: 15vmax;
+    margin: 2vmax 0;
+    margin-top: 30px;
+    @include md {
+        margin-top: 0px;
+      }
+  }
+
+  .button{
+    padding: 1em 2em;
+    margin: 1vmax 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #2c9caf;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+    margin-top: 10%;
+    cursor: pointer;
+    @include md {
+        margin-top: 0px;
+        letter-spacing: 5px;
+      }
+  }
+  .button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c9caf;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .button:hover::before {
+    width: 250%;
+  }
+  
+  .aboutSectionContainer > h1 {
+    font-weight: 400;
+    color: tomato;
+    margin: 2vmax;
+  }
+  
+  .aboutSectionContainer > div {
+    display: block;
+    width: 100%;
+    margin-top: -60px;
+    @include md {
+      display: flex;
+    }
+  }
+  
+  .aboutSectionContainer > div > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vmax;
+    box-sizing: border-box;
+  }
+  
+  .aboutSectionContainer > div > div > p {
+    color: rgba(0, 0, 0, 0.623);
+    font-weight: 300;
+  }
+  
+  .aboutSectionContainer > div > div > span {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.616);
+    text-align: center;
+    width: 80%;
+  }
+  
+  .aboutSectionContainer2 {
+    border-left: 1px solid rgba(0, 0, 0, 0.116);
+  }
+  
+  .aboutSectionContainer2 > h2 {
+    color: rgba(0, 0, 0, 0.623);
+    font-weight: 300;
+    margin: 1vmax;
+    text-align: center;
+    margin-bottom: 30px;
+    @include md {
+        margin: 2vmax;
+      }
+  }
+  
+  .aboutSectionContainer2 > a > svg {
+    font-size: 4vmax;
+  }
+}
+
+
