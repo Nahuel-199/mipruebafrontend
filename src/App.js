@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
+import Btn from "./components/btn/Btn";
 import Newsletter from "./components/newsletter/Newsletter";
 import ProductList from "./pages/productList/ProductList";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
@@ -12,6 +13,7 @@ function App() {
   return (
     <BrowserRouter>
                 <Header />
+                <Btn />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/products/:category" element={<ProductList />} />
